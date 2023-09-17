@@ -4,6 +4,7 @@ import java.util.Random;
 public class Words {
     private static ArrayList<String> words = new ArrayList<>();
 
+
     static {
         words.add("envelope");
         words.add("there");
@@ -63,5 +64,14 @@ public class Words {
         Random rand = new Random();
         int randomIndex = rand.nextInt(words.size());
         return words.get(randomIndex);
+    }
+
+    public static ArrayList<Character> convertWordToArray(String generatedWord){
+        String wordToGuess = generateWord();
+        ArrayList<Character> wordToArray = new ArrayList<>();
+        for (int i = 0; i < wordToGuess.length(); i++) {
+            wordToArray.add(wordToGuess.charAt(i));
+        }
+        return wordToArray;
     }
 }
