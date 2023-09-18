@@ -3,25 +3,11 @@ import java.util.Scanner;
 
 public class CaptureGuess {
     private ArrayList<Character> guessArray = new ArrayList<>();
-
-
-    private int lives;
-
-    public int getLives() {
-        return lives;
-    }
-
-    public void setLives(int lives) {
-        this.lives = lives;
-    }
-
-
-    public ArrayList<Character> captureGuess(ArrayList<Character> wordToGuess) {
+    public ArrayList<Character> captureGuess(ArrayList<Character> wordToGuess, int lives) {
         Scanner characterGuess = new Scanner(System.in);
         String guess;
         char charGuess = 0;
         System.out.println(wordToGuess);
-
 
         System.out.println("Guess a letter:");
         guess = characterGuess.nextLine();
@@ -31,9 +17,6 @@ public class CaptureGuess {
         } else {
             charGuess = guess.charAt(0);
             guessArray.add(charGuess);
-            if (!wordToGuess.contains(charGuess)) {
-                removeLife(lives);
-            }
         };
         System.out.println(guessArray);
         return guessArray;
@@ -41,9 +24,5 @@ public class CaptureGuess {
 
     public ArrayList<Character> getGuessArray() {
         return guessArray;
-    }
-
-    public void removeLife(int lives) {
-        setLives(lives - 1);
     }
 }
