@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class CaptureGuess {
     private ArrayList<Character> guessArray = new ArrayList<>();
+
     public ArrayList<Character> captureGuess(ArrayList<Character> wordToGuess, int lives) {
         Scanner characterGuess = new Scanner(System.in);
         String guess;
@@ -17,12 +18,9 @@ public class CaptureGuess {
         } else {
             charGuess = guess.charAt(0);
             guessArray.add(charGuess);
-        };
+        }
+        ;
         System.out.println(guessArray);
-        return guessArray;
-    }
-
-    public ArrayList<Character> getGuessArray() {
         return guessArray;
     }
 }

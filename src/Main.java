@@ -18,7 +18,6 @@ public class Main {
             ArrayList<Character> charGuess = newGuess.captureGuess(wordToGuessArray, lives);
             displayWord.displayWord(wordToGuessArray, charGuess);
             checkInput.checkWin(wordToGuessArray, charGuess);
-            System.out.println(charGuess);
             System.out.println(lives);
         } while (lives != 0);
     }

@@ -30,7 +30,7 @@ public class Words {
         words.add("exchange");
         words.add("candidate");
         words.add("noble");
-        words.add("breast");
+        words.add("nology");
         words.add("craftsman");
         words.add("general");
         words.add("slime");
