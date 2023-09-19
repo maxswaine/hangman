@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
-public class ChooseDifficulty {
+public class Lives {
     private String[] chooseDifficulty = new String[]{"Easy", "Normal", "Hard"};
+    private int lives;
 
     public int getLives() {
         return lives;
@@ -11,7 +12,10 @@ public class ChooseDifficulty {
         this.lives = lives;
     }
 
-    private int lives;
+    public void loseOneLife(){
+        lives --;
+    }
+
 
     public void printDifficulties() {
         System.out.println("Choose your difficulty: ");
@@ -21,11 +25,10 @@ public class ChooseDifficulty {
 
     }
 
-    public int getIntegerInput() {
+    public int setDifficulty() {
         Scanner getInteger = new Scanner(System.in);
         int commandInteger;
         do {
-            System.out.println("Choose your difficulty");
             while (!getInteger.hasNextInt()) {
                 System.out.println("Please enter a valid integer.");
                 getInteger.next();
@@ -34,11 +37,11 @@ public class ChooseDifficulty {
         } while (commandInteger < 0 || commandInteger >= chooseDifficulty.length + 1);
         switch (commandInteger) {
             case 1:
-                return 3;
+                return 8;
             case 2:
                 return 5;
             case 3:
-                return 8;
+                return 3;
             default:
                 return 0;
         }

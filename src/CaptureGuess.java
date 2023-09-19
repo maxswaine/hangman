@@ -18,8 +18,9 @@ public class CaptureGuess {
         } else {
             charGuess = guess.charAt(0);
             guessArray.add(charGuess);
+            System.out.println(guessArray);
         }
-        ;
+
         System.out.println(guessArray);
         return guessArray;
     }
